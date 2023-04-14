@@ -5,6 +5,7 @@ import NextJsButton from "../my_stack/components/nextjs_button";
 import Avatar from "./components/avatar";
 import Headline from "./components/head_line";
 import HireMeButton from "./components/hire_me_button";
+import SplineScene from "./components/spline";
 import StackTable from "./components/stack_table";
 
 export default function HomePage() {
