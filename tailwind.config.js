@@ -30,7 +30,7 @@ module.exports = {
         'on-background': 'white',
         'secondary-background': "#001115"
       }
-    })
-    
+    }),
+    require("tailwindcss-animate"),
   ],
 }

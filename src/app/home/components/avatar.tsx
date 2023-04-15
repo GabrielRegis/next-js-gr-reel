@@ -1,5 +1,8 @@
+"use client";
 import AppProps from "@/app/core/models/app_props";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { InView } from "react-intersection-observer";
 
 interface AvatarProps extends AppProps {
   className?: string;
