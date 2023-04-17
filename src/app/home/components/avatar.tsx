@@ -17,7 +17,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
         props.className
       }
     >
-      <div className="flex flex-row justify-between absolute inset-x-[-60px] inset-y-0 scale-y-50">
+      <div className="flex flex-row justify-between absolute inset-x-[-30px] sm:inset-x-[-50px] inset-y-0 scale-y-50">
         {Array.from({ length: 13 }, (value, index) => index).map((v, i) => (
           <div
             key={v}

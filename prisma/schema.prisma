@@ -29,6 +29,7 @@ model WorkExperience {
   fromYear    Int
   toYear      Int?
   imageSrc    String?
+  title       String      @default("")
   Framework   Framework[] @relation("WorkExperienceFramework")
 }
 

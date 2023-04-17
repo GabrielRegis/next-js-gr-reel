@@ -30,10 +30,10 @@ const WorkExperiencesList: React.FC<WorkExperiencesListProps> = (props) => {
               className="mr-6"
             />
 
-            <div className="flex flex-col font-medium text-on-background">
-              <h4 className=" text-sm ">Junior Developer</h4>
+            <div className="flex flex-col font-medium text-on-background flex-1">
+              <h4 className="text-sm ">{w.title}</h4>
               <h3 className="mb-2">{w.companyName}</h3>
-              <Tag className=" text-[10px] w-fit">
+              <Tag className="text-[10px] w-fit">
                 {w.fromYear +
                   (w.toYear != null ? " - " + w.toYear : " - Current")}
               </Tag>

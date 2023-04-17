@@ -14,7 +14,7 @@ const HeadlineSection: React.FC<HeadlineSectionProps> = (props) => (
 flex flex-row pt-8 gap-4 sm:gap-10 relative"
     >
       <div className="flex flex-col items-start z-10">
-        <Avatar className="sm:hidden self-center h-fit" />
+        <Avatar className="sm:hidden self-center h-[180px]" />
         <Headline className="text-center my-10 sm:my-0 sm:text-left " />
         <HireMeButton className="self-center sm:mt-8 sm:block sm:self-baseline " />
       </div>

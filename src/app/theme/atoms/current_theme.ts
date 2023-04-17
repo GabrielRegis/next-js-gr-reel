@@ -1,5 +1,5 @@
 import { atom } from "jotai";
 
-const themeAtom = atom<'dark'|'light'>('dark')
+const themeAtom = atom<"dark" | "light">("light");
 
-export default themeAtom
+export default themeAtom;
