@@ -15,8 +15,8 @@ const Avatar: React.FC<AvatarProps> = (props) => (
       props.className
     }
     src={"/me_b.jpg"}
-    width={300}
-    height={300}
+    width={400}
+    height={400}
     alt={"Profile image"}
   />
 );

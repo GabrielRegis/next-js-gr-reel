@@ -10,10 +10,14 @@ interface FrameworkButtonProps extends AppProps {
 
 const FrameworkButton: React.FC<FrameworkButtonProps> = (props) => (
   <Link
-    className="p-2 rounded-full bg-on-background aspect-square w-[50px] outline outline-primary outline-offset-1 outline-1 hover:outline-offset-2 hover:bg-primary transition-all"
+    className={
+      "p-2 rounded-full bg-on-background aspect-square w-[50px] outline outline-primary outline-offset-2 outline-2 hover:outline-offset-1  transition-all " +
+      props.className
+    }
     href={props.href ?? ""}
     rel="noopener noreferrer"
     target="_blank"
+    draggable="false"
   >
     {props.src == null ? (
       props.children
@@ -24,6 +28,7 @@ const FrameworkButton: React.FC<FrameworkButtonProps> = (props) => (
         width={50}
         height={50}
         alt={"Flutter logo"}
+        draggable="false"
       />
     )}
   </Link>

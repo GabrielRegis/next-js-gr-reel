@@ -28,7 +28,7 @@ module.exports = {
         'primary': "#fc6603",
         'background': "black",
         'on-background': 'white',
-        'secondary-background': "#001115"
+        'secondary-background': "#010408"
       }
     }),
     require("tailwindcss-animate"),

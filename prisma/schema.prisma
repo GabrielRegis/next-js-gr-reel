@@ -6,14 +6,31 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
-
 
 model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+}
+
+model Framework {
+  id             Int              @id @default(autoincrement())
+  name           String
+  href           String
+  imageSrc       String
+  isCurrent      Boolean          @default(true)
+  WorkExperience WorkExperience[] @relation("WorkExperienceFramework")
+}
+
+model WorkExperience {
+  id          Int         @id @default(autoincrement())
+  companyName String
+  fromYear    Int
+  toYear      Int?
+  imageSrc    String?
+  Framework   Framework[] @relation("WorkExperienceFramework")
 }

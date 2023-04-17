@@ -1,3 +1,4 @@
+import AppProps from "@/app/core/models/app_props";
 import Link from "next/link";
 
 const LinkedInIcon = (props: any) => (
@@ -12,14 +13,20 @@ const LinkedInIcon = (props: any) => (
   </svg>
 );
 
-export default function LinkedInButton() {
-  return (
-    <Link
-      href={"https://www.linkedin.com/in/gabriel-regis-941618152/"}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      {<LinkedInIcon />}
-    </Link>
-  );
+interface LinkedInButtonProps extends AppProps {
+  className?: string;
 }
+
+const LinkedInButton: React.FC<LinkedInButtonProps> = (props) => (
+  <Link
+    href={"https://www.linkedin.com/in/gabriel-regis-941618152/"}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    {<LinkedInIcon />}
+  </Link>
+);
+
+export default LinkedInButton;
+
+
