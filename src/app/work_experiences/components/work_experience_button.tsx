@@ -10,7 +10,10 @@ interface WorkExperienceButtonProps extends AppProps {
 
 const WorkExperienceButton: React.FC<WorkExperienceButtonProps> = (props) => (
   <Link
-    className=" rounded-full overflow-clip outline outline-primary outline-offset-4 outline-3 hover:outline-offset-2 hover:bg-primary select-none transition-all w-[50px] aspect-square sm:w-[100px]"
+    className={
+      "rounded-2xl overflow-clip shadow-xl select-none transition-all w-[100px] aspect-square sm:w-[120px] " +
+      props.className
+    }
     rel="noopener noreferrer"
     target="_blank"
     href={props.href ?? ""}
@@ -19,8 +22,8 @@ const WorkExperienceButton: React.FC<WorkExperienceButtonProps> = (props) => (
     <Image
       src={props.src ?? ""}
       alt={""}
-      width={100}
-      height={100}
+      width={120}
+      height={120}
       draggable="false"
     />
   </Link>

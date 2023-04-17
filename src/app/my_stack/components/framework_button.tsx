@@ -11,7 +11,7 @@ interface FrameworkButtonProps extends AppProps {
 const FrameworkButton: React.FC<FrameworkButtonProps> = (props) => (
   <Link
     className={
-      "p-2 rounded-full bg-on-background aspect-square w-[50px] outline outline-primary outline-offset-2 outline-2 hover:outline-offset-1 transition-all " +
+      "p-2 rounded-full bg-on-background aspect-square outline outline-primary outline-offset-2 outline-2 hover:outline-offset-1 transition-all " +
       props.className
     }
     href={props.href ?? ""}
