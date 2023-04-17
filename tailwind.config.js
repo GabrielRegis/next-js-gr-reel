@@ -19,13 +19,18 @@ module.exports = {
   plugins: [
     createThemes({
       light: {
-        'primary': "#fc6603",
+        'primary': "#00c3ff",
+        // 'primary': "#0022ff",
+        'secondary': "#fc6603",
+        'tertiary': "#ff0080",
         'background': "white",
         'on-background': '#0d1f26',
         'secondary-background': "#dbecff"
       },
       dark: {
-        'primary': "#fc6603",
+        'primary': "#ff0080",
+        'secondary': "#fc6603",
+        'tertiary': "#ff0080",
         'background': "black",
         'on-background': 'white',
         'secondary-background': "#010408"

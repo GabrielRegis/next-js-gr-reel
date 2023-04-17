@@ -11,7 +11,6 @@ interface StackTableProps extends AppProps {
 
 const StackTable: React.FC<StackTableProps> = (props) => {
   const [currentStack] = useAtom(currentStackAtom);
-  console.log(currentStack);
   return (
     <div className="grid grid-flow-col justify-start gap-4 w-full mt-4">
       {currentStack.state === "hasData" ? (
@@ -25,7 +24,9 @@ const StackTable: React.FC<StackTableProps> = (props) => {
           );
         })
       ) : (
-        <h1>Loading</h1>
+        <div className=" grid ">
+          <div className="w-[30px] aspect-square bg-white rounded-full animate-pulse"></div>
+        </div>
       )}
     </div>
   );

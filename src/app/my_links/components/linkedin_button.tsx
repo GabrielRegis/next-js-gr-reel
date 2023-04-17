@@ -28,5 +28,3 @@ const LinkedInButton: React.FC<LinkedInButtonProps> = (props) => (
 );
 
 export default LinkedInButton;
-
-
