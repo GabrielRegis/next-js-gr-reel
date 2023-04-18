@@ -22,12 +22,12 @@ const Avatar: React.FC<AvatarProps> = (props) => {
           <div
             key={v}
             className={
-              " w-[5.5px] rounded-full odd:bg-primary odd:scale-y-50 even:bg-primary/20 "
+              "w-[5.5px] rounded-full odd:bg-primary odd:scale-y-50 even:bg-primary/20"
             }
           />
         ))}
       </div>
-      <Tag className="absolute z-1 -right-20 top-5 rounded-3xl rounded-bl-sm bg-primary text-white">
+      <Tag className="absolute z-1 -right-20 top-5 rounded-3xl rounded-bl-sm bg-primary text-white animate-waving-up-down ">
         Hey, I'm Gab!
       </Tag>
       <Image

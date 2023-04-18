@@ -11,7 +11,7 @@ interface WorkExperienceButtonProps extends AppProps {
 const WorkExperienceButton: React.FC<WorkExperienceButtonProps> = (props) => (
   <Link
     className={
-      "rounded-2xl overflow-clip shadow-xl select-none transition-all w-[100px] aspect-square sm:w-[120px] " +
+      "rounded-full overflow-clip shadow-xl select-none transition-all w-[100px] aspect-square sm:w-[120px] " +
       props.className
     }
     rel="noopener noreferrer"

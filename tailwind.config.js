@@ -13,13 +13,23 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      }
+      },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'translate(0px,0px)' },
+          '50%': { transform: 'translate(0px,-8px)' },
+          '100%': { transform: 'translate(0px,0px)' },
+        },
+      },
+      animation: {
+        'waving-up-down': 'wave 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [
     createThemes({
       light: {
-        'primary': "#00c3ff",
+        'primary': "#02a2d4",
         // 'primary': "#0022ff",
         'secondary': "#fc6603",
         'tertiary': "#ff0080",
@@ -28,7 +38,8 @@ module.exports = {
         'secondary-background': "#dbecff"
       },
       dark: {
-        'primary': "#ff0080",
+        'primary': "#02a2d4",
+        // 'primary': "#ff0080",
         'secondary': "#fc6603",
         'tertiary': "#ff0080",
         'background': "black",

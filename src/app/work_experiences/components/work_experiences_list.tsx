@@ -17,32 +17,32 @@ const WorkExperiencesList: React.FC<WorkExperiencesListProps> = (props) => {
   const [currentExperiences] = useAtom(currentExperiencesAtom);
 
   return (
-    <div className="flex flex-col justify-start content-start w-full gap-8">
+    <div className="flex flex-col md:flex-row-reverse justify-end content-start w-full gap-8 md:gap-12">
       {currentExperiences.state === "hasData" ? (
         currentExperiences.data.map((w, i) => (
           <div
             key={i}
-            className="flex flex-row items-center content-center rounded-md "
+            className="flex flex-row items-center rounded-md gap-6 md:flex-col md:max-w-[150px]"
           >
             <WorkExperienceButton
               href={w.companyUrl ?? ""}
               src={w.imageSrc ?? ""}
-              className="mr-6"
             />
 
-            <div className="flex flex-col font-medium text-on-background flex-1">
+            <div className="flex flex-col font-medium text-on-background">
               <h4 className="text-sm ">{w.title}</h4>
               <h3 className="mb-2">{w.companyName}</h3>
               <Tag className="text-[10px] w-fit">
                 {w.fromYear +
                   (w.toYear != null ? " - " + w.toYear : " - Current")}
               </Tag>
-              <div className=" flex flex-wrap gap-3 mt-4">
+              <div className=" flex flex-wrap gap-2 mt-4">
                 {w.Framework.map((f, i) => (
                   <FrameworkButton
                     key={f.name + i}
                     src={f.imageSrc}
-                    className="w-[30px]"
+                    href={f.href}
+                    className="w-[36px]"
                   />
                 ))}
               </div>

@@ -31,12 +31,5 @@ const StackTable: React.FC<StackTableProps> = (props) => {
     </div>
   );
 };
-{
-  /* <FlutterButton />
-  <NextJsButton />
-  <ReactButton />
-  <FrameworkButton src="/python.png" href="https://www.python.org/" />
-  <FastApiButton /> */
-}
 
 export default StackTable;
