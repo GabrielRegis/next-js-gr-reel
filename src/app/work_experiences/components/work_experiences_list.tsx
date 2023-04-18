@@ -25,7 +25,7 @@ const WorkExperiencesList: React.FC<WorkExperiencesListProps> = (props) => {
             className="flex flex-row items-center content-center rounded-md "
           >
             <WorkExperienceButton
-              href="https://www.linkedin.com/company/esparta-tecnologia-e-inova%C3%A7%C3%A3o/"
+              href={w.companyUrl ?? ""}
               src={w.imageSrc ?? ""}
               className="mr-6"
             />
