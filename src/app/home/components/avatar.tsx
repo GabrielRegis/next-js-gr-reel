@@ -1,15 +1,12 @@
-"use client";
 import Tag from "@/app/core/components/tag";
-import AppProps from "@/app/core/models/app_props";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
-import { InView } from "react-intersection-observer";
+import AppProps from "@/app/core/models/app_props";
 
-interface AvatarProps extends AppProps {
+type AvatarProps = {
   className?: string;
-}
+} & AppProps;
 
-const Avatar: React.FC<AvatarProps> = (props) => {
+const Avatar = (props: AvatarProps) => {
   return (
     <div
       className={

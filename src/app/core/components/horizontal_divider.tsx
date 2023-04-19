@@ -1,10 +1,10 @@
 import AppProps from "../models/app_props";
 
-interface HorizontalDividerProps extends AppProps {
+type HorizontalDividerProps = {
   className?: string;
-}
+} & AppProps;
 
-const HorizontalDivider: React.FC<HorizontalDividerProps> = (props) => (
+const HorizontalDivider = (props: HorizontalDividerProps) => (
   <div
     className={"h-[1px] bg-on-background/20 rounded-lg " + props.className}
   />

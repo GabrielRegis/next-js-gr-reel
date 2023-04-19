@@ -3,18 +3,16 @@ import { Framework, WorkExperience } from "@prisma/client";
 import { atom } from "jotai";
 import { loadable } from "jotai/utils";
 
-const experiencesAtom = atom<
-  (WorkExperience & {
-    Framework: Framework[];
-  })[]
->([]);
+type WorkExperienceWithFrameworks = WorkExperience & {
+  Framework: Framework[];
+};
+
+const experiencesAtom = atom<WorkExperienceWithFrameworks[]>([]);
 
 const currentExperiencesAtom = loadable(
   atom(async (get) => {
     const e = await fetch("api/experiences/");
-    const experiences: (WorkExperience & {
-      Framework: Framework[];
-    })[] = await e.json();
+    const experiences: WorkExperienceWithFrameworks[] = await e.json();
     return get(experiencesAtom).concat(
       experiences.sort((a, b) => (a.fromYear < b.fromYear ? 1 : -1))
     );

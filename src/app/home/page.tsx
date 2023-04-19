@@ -14,6 +14,7 @@ import SwiftButton from "../my_stack/components/swift_button";
 import FastApiButton from "../my_stack/components/fast_api_button";
 import HeadlineSection from "./components/head_line_section";
 import WorkExperiencesList from "../work_experiences/components/work_experiences_list";
+import Link from "next/link";
 
 const HomePage: React.FC = (props) => (
   <>
