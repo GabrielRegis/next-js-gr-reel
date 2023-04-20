@@ -1,6 +1,9 @@
 import Tag from "@/app/core/components/tag";
 import Image from "next/image";
 import AppProps from "@/app/core/models/app_props";
+import { motion } from "framer-motion";
+import SSRMotion from "@/app/core/components/motion_div";
+import MotionDiv from "@/app/core/components/motion_div";
 
 type AvatarProps = {
   className?: string;
@@ -8,7 +11,7 @@ type AvatarProps = {
 
 const Avatar = (props: AvatarProps) => {
   return (
-    <div
+    <MotionDiv
       className={
         "h-[150px] md:h-[230px] lg:h-[250px] aspect-square object-cover rounded-full transition-all relative " +
         props.className
@@ -36,7 +39,7 @@ const Avatar = (props: AvatarProps) => {
         quality={100}
         alt={"Profile image"}
       />
-    </div>
+    </MotionDiv>
   );
 };
 
