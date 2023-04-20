@@ -7,7 +7,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-  
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -35,7 +34,8 @@ module.exports = {
         'tertiary': "#ff0080",
         'background': "white",
         'on-background': '#0d1f26',
-        'secondary-background': "#dbecff"
+        'secondary-background': "#dbecff",
+        "memhack-primary": "#F23382"
       },
       dark: {
         'primary': "#02a2d4",
@@ -44,7 +44,8 @@ module.exports = {
         'tertiary': "#ff0080",
         'background': "black",
         'on-background': 'white',
-        'secondary-background': "#010408"
+        'secondary-background': "#010408",
+        "memhack-primary": "#F23382"
       }
     }),
     require("tailwindcss-animate"),
